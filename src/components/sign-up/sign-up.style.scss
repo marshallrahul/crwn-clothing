@@ -1,9 +1,23 @@
 .sign-up {
-    display: flex;
-    flex-direction: column;
-    width: 380px;
+    flex: 0 0 35%;
 
     .title {
-        margin: 10px 0;
+        font-size: 2.2rem;
+    }
+
+    .sub-title {
+        font-size: 1.6rem;
+        padding-top: 0.8rem;
+    }
+
+    .button {
+        margin-top: 3rem;
+
+        .custom-button {
+            font-size: 1.5rem;
+            font-weight: 300;
+            height: 5rem;
+            width: 18rem;
+        }
     }
 }

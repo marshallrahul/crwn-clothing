@@ -1,23 +1,29 @@
 .collection-item {
-    width: 22%;
-    display: flex;
-    flex-direction: column;
-    height: 350px;
-    align-items: center;
+    position: relative;
 
-    .image {
-        width: 100%;
-        height: 95%;
-        background-size: cover;
+    .bg-photo {
+        height: 35rem;
+        width: auto;
         background-position: center;
-        margin-bottom: 5px;
+        background-size: cover;
     }
 
-    .collection-footer {
-        width: 100%;
-        height: 5%;
+    .content {
+        font-size: 1.8rem;
+        margin-top: 0.5rem;
+
         display: flex;
         justify-content: space-between;
-        font-size: 18px;
+    }
+
+    .button {
+        position: absolute;
+        top: 70%;
+        left: 8%;
+        visibility: hidden;
+    }
+
+    &:hover .button {
+        visibility: visible;
     }
 }

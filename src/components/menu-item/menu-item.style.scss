@@ -1,70 +1,53 @@
 .menu-item {
+    position: relative;
     min-width: 30%;
-    height: 240px;
+    height: 24rem;
     flex: 1 1 auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
-    margin: 0 7.5px 15px;
-    background-position: center;
-    background-size: cover;
+    margin: 0 0.75rem 1.5rem;
     overflow: hidden;
+    border: 1px solid black;
 
-    &:hover {
-        cursor: pointer;
+    .bg-photo {
+        height: 100%;
+        width: 100%;
+        background-position: top;
+        background-size: cover;
+        transition: transform 0.8s ease-in, opacity 0.1s;
+    }
 
-        & .background-image {
-            transform: scale(1.1);
-            transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-        }
-
-        & .content {
-            opacity: 0.9;
-        }
+    &:hover .bg-photo {
+        transform: scale(1.08);
+        opacity: 0.9;
     }
 
     &.large {
-        height: 380px;
-    }
-
-    &:first-child {
-        margin-right: 7.5px;
-    }
-
-    &:last-child {
-        margin-left: 7.5px;
-    }
-
-    .background-image {
-        height: 100%;
-        width: 100%;
-        background-position: center;
-        background-size: cover;
+        height: 30rem;
     }
 
     .content {
-        height: 90px;
-        padding: 0 25px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid black;
-        background-color: white;
-        opacity: 0.7;
         position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid black;
+        text-align: center;
+        height: 9rem;
+        width: 12rem;
+        padding-top: 1.8rem;
+        color: rgb(68, 68, 68);
 
-        .title {
-            font-weight: bold;
-            margin-bottom: 6px;
-            font-size: 22px;
-            color: #4a4a4a;
+        &:hover {
+            color: black;
+            background-color: rgba(255, 255, 255, 0.4);
         }
+    }
 
-        .subtitle {
-            font-weight: lighter;
-            font-size: 16px;
-        }
+    .sub-title {
+        font-size: 1.5rem;
     }
 }
