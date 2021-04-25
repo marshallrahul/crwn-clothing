@@ -7,18 +7,25 @@ import { selectCollection } from "../../redux/shop/shop.selector";
 
 import "./collection.style.scss";
 
-const CollectionPage = ({ collection }) => {
-    const { title, items } = collection;
-    return (
-        <div className="collection-page">
-            <div className="title">{title}</div>
-            <div className="items">
-                {
-                    items.map((item) => <CollectionItem key={item.id} item={item} />)
-                }
+class CollectionPage extends React.Component {
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+
+    render() {
+        const { collection } = this.props;
+        const { title, items } = collection;
+        return (
+            <div className="collection-page">
+                <div className="title">{title}</div>
+                <div className="items">
+                    {
+                        items.map((item) => <CollectionItem key={item.id} item={item} />)
+                    }
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 };
 
 const mapStateToProps = (state, ownProps) => ({
